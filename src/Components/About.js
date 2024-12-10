@@ -46,7 +46,7 @@ const About = () => {
         <Skills skill='Figma' />
         <Skills skill='Vercel' />
         <Skills skill='Npm' />
-        <Skills skill='TailwindCSS'/>
+        <Skills skill='Bootstrap'/>
         
       </div>
     </>

@@ -1,52 +1,59 @@
 import React from 'react';
-import {FaGithub} from "react-icons/fa";
-import {CgFileDocument} from "react-icons/cg";
+import { FaGithub } from "react-icons/fa";
+import { CgFileDocument } from "react-icons/cg";
 
-
-const  ProjectBox = ({projectPhoto, projectName}) => {
+const ProjectBox = ({ projectPhoto, projectName }) => {
   const desc = {
-    TindogDesc : "This website is a landing page of Tinder but for dogs. It is a responsive website which was made to understand Bootstrap. I also learned how to host my project on Github and then how to deploy that project using Github pages.",
-    TindogGithub : "https://github.com/DevanshSahni/tindog",
-    TindogWebsite : "https://devanshsahni.github.io/tindog/",
+    CricketMatchPredictionDesc: "A machine learning model that predicts the outcome of cricket matches using various data features. Built using Python with Flask for the backend and TensorFlow/Keras for AI models.",
+    CricketMatchPredictionGithub: "https://github.com/Mahesh7741/Cricket-Match-Winning-Prediction-",
+    CricketMatchPredictionWebsite: "#",
 
-    RogFreeDesc : "A website that shows you over seven specialized yoga postures for specific diseases or health problems. This was a group project made in a team of two for a 36-hour-long online hackathon named Hackodisha 2.0.",
-    RogFreeGithub : "https://github.com/DevanshSahni/Rog-Free",
-    RogFreeWebsite : "https://devanshsahni.github.io/Rog-Free/",
+    MovieHubDesc: "A movie search and recommendations platform built using ReactJS and various public APIs to fetch and display movie information dynamically.",
+    MovieHubGithub: "https://github.com/Mahesh7741/MoviesHub.git",
+    MovieHubWebsite: "#",
 
-    NewsletterDesc:"A newsletter signup site made using Mailchimp API where the signups can be monitored from the MailChimp account. This project was made to understand API integration, environment variables and vercel deployment.",
-    NewsletterGithub:"",
-    NewsletterWebsite:"https://newsletter-signup-teal.vercel.app/",
-    
-    WigglesDesc:"An innovative pet management web app enabling pet parents to create unique pet IDs, securely store and share vaccination records, and generate QR codes for pet profiles, enhancing safety.",
-    WigglesGithub:"https://github.com/DevanshSahni/Wiggles",
-    WigglesWebsite:"https://wiggles.vercel.app/",
+    CryptoWalletExtensionDesc: "A browser extension that allows users to manage their cryptocurrency wallets. Built using ReactJS for frontend and NodeJS for the backend with EthersJS for interacting with blockchain networks.",
+    CryptoWalletExtensionGithub: "https://github.com/Mahesh7741/Crypto-Wallet-.git",
+    CryptoWalletExtensionWebsite: "#",
+
+    RustFileCompressorDesc: "A file compression tool written in Rust that enables the efficient compression of files. Requires Rust and Cargo package manager for running.",
+    RustFileCompressorGithub: "https://github.com/Mahesh7741/Compress-File.git",
+    RustFileCompressorWebsite: "#",
+
+    TODOListDesc: "A full-stack To-Do List app built using the MERN stack (MongoDB, Express, React, Node.js). It allows users to manage their tasks effectively with CRUD operations.",
+    TODOListGithub: "https://github.com/Mahesh7741/MovereFac-TODO.git",
+    TODOListWebsite: "#",
+
+    YouTubeVideoFetchDesc: "A web app that fetches YouTube video data using YouTube Data API. Built with Node.js for the backend and MongoDB for storing video data.",
+    YouTubeVideoFetchGithub: "https://github.com/Mahesh7741/YouTube-Data-Fatch.git",
+    YouTubeVideoFetchWebsite: "#",
+  };
+
+  let show = '';
+  if (desc[projectName + 'Github'] === "") {
+    show = "none";
   }
 
-  let show ='';
-  if(desc[projectName + 'Github']===""){
-    show="none";
-  }
-    
   return (
-    <div className='projectBox'> 
-        <img className='projectPhoto' src={projectPhoto} alt="Project display" /> 
-        <div>
-            <br />
-            <h3>{projectName}</h3>
-            <br />
-            {desc[projectName + 'Desc']}
-            <br />
+    <div className="projectBox">
+      <img className="projectPhoto" src={projectPhoto} alt="Project display" />
+      <div>
+        <br />
+        <h3>{projectName}</h3>
+        <br />
+        {desc[projectName + 'Desc']}
+        <br />
 
-            <a style={{display:show}} href={desc[projectName + 'Github']} target='_blank'>
-              <button className='projectbtn'><FaGithub/> Github</button>
-            </a>
+        <a style={{ display: show }} href={desc[projectName + 'Github']} target="_blank" rel="noreferrer">
+          <button className="projectbtn"><FaGithub /> Github</button>
+        </a>
 
-            <a href={desc[projectName + 'Website']} target='_blank'>
-              <button className='projectbtn'><CgFileDocument/> Demo</button>
-            </a>
-        </div>
+        <a href={desc[projectName + 'Website']} target="_blank" rel="noreferrer">
+          <button className="projectbtn"><CgFileDocument /> Demo</button>
+        </a>
+      </div>
     </div>
-  )
+  );
 }
 
-export default  ProjectBox
+export default ProjectBox;
